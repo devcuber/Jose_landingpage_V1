@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body{
+        margin:0px;
+    }
+    .section1 {
+        background: linear-gradient( #000000, #4a45c1 ) ;
+        display: flex;
+        flex-direction: row;
+        justify-content:space-around ;
+        padding: 20px;
+    }
+
+    .section1__imgcontainer img{
+        border-radius: 50px;
+        max-width: 400px;
+        width: 70%;
+    }
+
+    .section1 h2 {
+    text-align: center;
+    color: white;
+    }
+
+    .section1__imgcontainer p{
+        color: white;
+        text-align: right;
+    }
+    .section1__formcontainer{
+        background-color: rgba(1,1,1, 0.2);
+        border: 2px solid white;
+        border-radius: 40px;
+        padding: 30px 30px 30px;
+        min-height: 300px;
+        width: 300px;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+    }
+    .section1__container--form{
+        display: flex;
+        flex-direction: column;
+    }
+    .input{
+    color: white;
+    background-color: transparent;
+    border-left: 0px;
+    border-top: 0px;
+    border-right: 0px;
+    border-bottom: 2px solid white;
+    font-family: 'Muli', sans-serif ;
+    font-size: 16px;
+    margin-bottom: 15px;
+    padding: 0px 20px;
+    outline: none;
+    height: 50px;
+    }
+    ::placeholder{
+    color: white;
+    }
+    .button{
+    background-color: rgba(255,255,255, 0.1);
+    border:none;
+    border-radius: 25px;
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    font-family: 'Muli', sans-serif ;
+    height: 50px;
+    letter-spacing: 1px;
+    margin: 10px 0px;
+}
+/****************************************************************
+                        Section 2
+******************************************************************/
+
+h1 {
+    margin: 0px;
+    color: white;
+    text-align: center;
+    background-color :  #4a45c1;
+}
+
+.Carousel {
+    /* width: 100%; */
+    overflow: scroll;
+    overflow-y: hidden;
+    padding: 30px;
+    position: relative;
+    background-color :  #4a45c1;
+    }
+    ::-webkit-scrollbar {
+    width: 0px;
+    background: transparent; /* make scrollbar transparent */
+    }
+
+    .Carousel__container {
+    white-space: nowrap;
+    /* margin: 70px 0px; */
+    padding-bottom: 10px;
+    }
+
+.carousel-item{
+    display: inline-block;
+    background-color: rgba(255,255,255, 0.1);
+    width: 400px;
+    height: 550px;
+    border-radius: 20px;
+    overflow: hidden;
+    margin-right: 10px;
+    /* cursor: pointer; */
+    /* transition: 450ms all; */
+    /* transform-origin: center left; */
+    /* position: relative; */
+}
+
+.Carousel p {
+    color: white;
+    white-space: normal;
+    margin: 50px 30px;
+    height: 130px;
+    text-align: justify;
+}
+
+.Carousel h2 {
+    margin-top: 20px ;
+    margin-bottom: 20px ;
+    text-align: center;
+    color: white;
+    }
+.Carousel h3 {
+    margin-top: 10px ;
+    margin-bottom: 30px ;
+    text-align: center;
+    color: white;
+}
+.Carousel__container img{
+    border-radius: 20px;
+    height: 80px;
+    display: block;
+    margin: auto;
+}
+.Carousel__container iframe{
+    border-radius: 20px;
+    height: 200px;
+    display: block;
+    margin: auto;
+}
+
+.Carousel__container--title{
+    text-align: center;
+    font-size: 16 ;
+}
+.Carousel__container--button{
+    background-color: rgba(255,255,255, 0.3);
+    border-radius: 25px;
+    color: white;
+    font-weight: bold;
+    font-family: 'Muli', sans-serif;
+    letter-spacing: 1px;
+    padding: 20px;
+    text-align: center;
+    display: block;
+    margin: 10px 120px;
+}
+a {
+    color: white;
+}
+
+</style>
+<body>
+    <header> Titulo </header>
+
+    <section class="section1" >
+        <article class="section1__imgcontainer" >
+            <img src="img/jose_profile.png" alt="">
+            <!-- <p> José Luis Jiménez Castillo</p>
+            <p> Ingeniero de Software</p>
+            <p> Arq. de software / Programador</p> -->
+        </article>
+        <article class="section1__formcontainer">
+            <h2>Contacto</h2>
+            <form id="contact_form" class="section1__container--form">
+                <input class="input" type="text" placeholder="Nombre">
+                <input class="input" type="text" placeholder="Correo">
+                <textarea class="input" form="contact_form">Escribe tu mensaje acá . . . </textarea>
+                <button class="button">Enviar</button>
+            </form>
+        </article>
+    </section>
+
+    <h1>Proyectos</h1>
+    <section class="Carousel">
+        <div class = "Carousel__container">
+
+            <div class="carousel-item">
+                <h2>Autenticación Biometrica para ERP</h2>
+                <h3> Grupo Innova HN </h3>
+                <iframe src="https://www.youtube.com/embed/E4ZhRxvB3Po" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <p>
+                    Solución de autenticación biométrica compatible con Sistemas de Información en windows. son 2 aplicativos
+                    Registrador.jar devuelve una trama al sistema de información que lo invocó y este lo gestione.
+                    Verificador.jar devuelve un true o false al sistema de información que lo invocó y este lo integre a cualquier proceso de negocio que lo requiera
+                    <a href="http://jimenezcastillo8.blogspot.com/2016/04/aplicacion-biometrica-compatible-con.html" target="blank"> mas informacipon ... </a>
+                </p>
+            </div>
+
+            <div class="carousel-item">
+                <h2 > Control de Acceso Arduino v2</h2>
+                <h3> Grupo Innova HN </h3>
+                <iframe src="https://www.youtube.com/embed/Ra_5sOWuxtk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>                
+                <p>
+                    Acceso alterno para personas que tienen problemas para usar lectores biométricos. Módulo desarrollado con un <a href="https://www.arduino.cc/" target="blank"> Arduino </a>
+                    que a través de un código personal consulta a la base de datos el estatus de facturación de un cliente y decide si dejarlo pasar o no. la interfaz gráfica
+                    está desarrollada en PHP.
+                </p>
+            </div>
+
+            <div class="carousel-item">
+                <h2 >Registrador Huellas C# </h2>
+                <h3> Grupo Innova HN </h3>
+                <iframe src="https://www.youtube.com/embed/ylw8WwYUdAM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <p>
+                    Aplicacion de escritorio C# .NET, que captura hasta 10 huellas de una persona. compatible con todos los lectores de la marca
+                    <a href="https://www.fingertec.com/" target="blank"> Fingertec </a> y lo almacena en una base de datos Postgresql
+                    para su posterior administración.
+                </p>
+            </div>
+
+            <div class="carousel-item">
+                <h2 > Registrador Huellas Java </h2>
+                <h3> Grupo Innova HN </h3>
+                <!-- <img src="http://ngshn.com/wp-content/uploads/NGS-Logo-Small-1.png" alt=""> -->
+                <iframe src="https://www.youtube.com/embed/2Of65eQWRGI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>                
+                <p>
+                    Aplicacion de escritorio Java, que captura hasta 10 huellas de una persona con un lector biométrico 
+                    <a href="https://g.co/kgs/ETfuc8"> DigitalPersona U. are U. 4500 </a> y lo almacena en una base de datos Postgresql
+                    para su posterior administración.
+                </p>
+            </div>
+
+            <div class="carousel-item">
+                <h2 > Control de Acceso Arduino v1</h2>
+                <h3> Grupo Innova HN </h3>
+                <!-- <img src="http://www.hngsystems.com/img/sedna-logo@2x.png" alt=""> -->
+                <iframe src="https://www.youtube.com/embed/KGM5ZLd80K8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <p>
+                    Algunas personas tienen problemas para usar accessos biométricos, como adultos mayores, niños, etc. en un gimnasio dessarollamos
+                    un acceso alterno para estas personas con un <a href="https://www.arduino.cc/" target="blank"> Arduino </a> que a través de un código
+                    personal consulta a la base de datos el estatus de facturación de un cliente y decide si dejarlo pasar o no.
+                </p>
+                <!-- <a class="Carousel__container--button" href="http://www.hngsystems.com/" target="_blank"> Mas detalles </a> -->
+            </div>
+
+        </div>
+    </section>
+
+
+    <h1 >Experiencia Laboral</h1>
+    <section class="Carousel">
+        <div class = "Carousel__container">
+
+            <div class="carousel-item">
+                <h2 > Arquitecto de Software </h2>
+                <h3> Octubre 2019 - Actualmente </h3>
+                <img src="http://www.hngsystems.com/img/sedna-logo@2x.png" alt="">
+                <p>
+                    CENTEC, es una empresa especializada en el desarrollo de sistemas informáticos,
+                    actualmente me desempeño como arquitecto de software y programador PL/SQL
+                    en la industria de las telecomunicaciones.
+                </p>
+                <a class="Carousel__container--button" href="http://www.hngsystems.com/" target="_blank"> Mas detalles </a>
+            </div>
+
+            <div class="carousel-item">
+                <h2 > Analista Programador </h2>
+                <h3> Marzo 2018 - Octubre 2019 </h3>
+                <img src="http://ngshn.com/wp-content/uploads/NGS-Logo-Small-1.png" alt="">
+                <p>
+                    NGS es una empresa de consultoría, especializada en la construcción de software a la medida.
+                    en NGS me desempeñé como analista de sistemas, programador de aplicaciones de escritorio C# con .NET (DevExpress),
+                    diseñador de bases de datos en Oracle y programador PL/SQL para la industria Textil.
+                </p>
+                <a class="Carousel__container--button" href="http://ngshn.com/" target="_blank"> Mas detalles </a>
+            </div>
+
+            <div class="carousel-item">
+                <h2 > Gerente </h2>
+                <h3> Septiembre 2016 - Actualidad </h3>
+                <img src="https://lh3.googleusercontent.com/TGxgFjBUDmbZwSic2YCmiJVUiCt9Yyv0l-SGLzNEf5x4hLfk8jqeZFzvQl12rMKkbBpPLYHjVDijmuBEOg=w1080-h608-p-no-v0" alt="">
+                <p>
+                    Inframundo HN, es una tienda de cubos de rubik profesionales para sppedcubing y de colección.
+                    Yo soy uno de los fundadores de InframundoHN y me desempeño como gerente, también desarrollo el software necesario
+                    para la gestión de la tienda y he sido organizador de torneos oficiales reconocidos por la
+                    <a href="https://www.worldcubeassociation.org/" target="blank">WCA (Asociación mundial del cubo).</a>
+                </p>
+                <a class="Carousel__container--button" href="https://inframundohn.negocio.site/" target="_blank"> Mas detalles </a>
+            </div>
+
+            <div class="carousel-item">
+                <h2 > Analista Programador </h2>
+                <h3> Noviembre 2014 - Abril 2017 </h3>
+                <img src="https://odoocdn.com/web/image/res.partner/421572/image_512/Grupo%20Innova?unique=11a3aa4" alt="">
+                <p>
+                    Grupo Innova es una empresa que ofrece soluciones tecnológicas y es distribuidor oficial del software
+                    empresarial <a href="https://www.odoo.com/es_ES/" target="blank">ODOO ERP,</a>
+                    en Innova me desempeñé como desarrollador de módulos para ODOO en lenguaje python y base de datos Postgresql
+                    también tuve la oportunidad de desarrollar aplicaciones satelites a ODOO con Java, C#, PHP y Arduino.
+                </p>
+                <a class="Carousel__container--button" href="https://www.odoo.com/es_ES/partners/grupo-innova-421572" target="_blank"> Mas detalles </a>
+            </div>
+
+        </div>
+    </section>
+
+    <h1 >Estudios</h1>
+    <section class="Carousel">
+        <div class = "Carousel__container">
+
+            <div class="carousel-item">
+                <h2 > Ingenieria en Sistemas </h2>
+                <h3>  UNAH </h3>
+                <img src="https://www.unah.edu.hn/themes/portalunah/assets/images/logo-unah.png" alt="">
+                <p>
+                    La ingeniería de sistemas es una carrera universitaria que se encarga del diseño, la programación, la implantación y el mantenimiento de sistemas.
+                    Estudié esta ingeniería en la Universidad Nacional Autónoma de Honduras
+                </p>
+                <a class="Carousel__container--button" href="https://is.unah.edu.hn/" target="_blank"> Mas detalles </a>
+            </div>
+
+            <div class="carousel-item">
+                <h2 >SCRUM professional Certificate</h2>
+                <h3>Certiprof</h3>
+                <img src="https://cdn.shopify.com/s/files/1/0299/9215/7283/files/Certiprof_scrum_Foundation_professional_certificate.png?v=1591654752" alt="">
+                <p>
+                    Scrum es un marco de trabajo para desarrollo ágil de software. Adoptar una estrategia de desarrollo incremental,
+                    en lugar de la planificación y ejecución completa del producto.
+                </p>
+                <a class="Carousel__container--button" href="https://certiprof.com/pages/scrum-foundations-professional-certificate-sfpc-spanish" target="_blank"> Mas detalles </a>
+            </div>
+
+            <div class="carousel-item">
+                <h2 > Fundamentos de JavaScript </h2>
+                <h3> Platzi </h3>
+                <img src="https://static.platzi.com/mf-landings/image/isotipoPlatzi-442ccc1186a9806e18c9889cc301ffe1.png" alt="">
+                <p>
+                    JavaScript, es uno de los más potentes e importantes lenguajes de programación en la actualidad,
+                    se utiliza principalmente para desarrollo web.
+                </p>
+                <a class="Carousel__container--button" href="https://platzi.com/@jose-luis226/" target="_blank"> Mas detalles </a>
+            </div>
+
+        </div>
+    </section>
+
+
+
+</body>
+</html>
