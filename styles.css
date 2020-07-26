@@ -1,6 +1,6 @@
 body{
     margin:0px;
-    background-color: black;
+    /* background-color: black; */
 }
 
 /**********************************************
@@ -11,7 +11,7 @@ nav {
     top:0;
     left:0;
     width: 100%;
-    height: 70px;
+    height: 60px;
     background: black;
     padding: 0 100px;
     box-sizing: border-box;
@@ -44,7 +44,7 @@ nav ul li {
 nav ul li a{
     position: relative;
     display: block;
-    height: 70px;
+    height: 60px;
     line-height: 70px;
     padding: 0 10px;
     box-sizing: border-box;
@@ -66,43 +66,112 @@ nav ul li a{
 .section1 {
     background: linear-gradient( #000000, #4a45c1 ) ;
     display: flex;
-    flex-direction: row;
     justify-content:space-around ;
     padding: 20px;
 }
 
-.section1__imgcontainer img{
-    /* object-fit: cover; */
-    /* object-position: 100px 100px; */
-    border-radius: 100px;
-    max-width: 400px;
-    width: 70%;
-}
-
-.section1 h2 {
-text-align: center;
-color: white;
-}
-
-.section1__imgcontainer p{
-    color: white;
-    text-align: right;
-}
 .section1__formcontainer{
     background-color: rgba(1,1,1, 0.2);
+    border:none;
     border: 2px solid white;
     border-radius: 40px;
-    padding: 30px 30px 30px;
+    padding: 10px 20px;
     min-height: 300px;
     width: 300px;
     display: flex;
     justify-content: space-between;
     flex-direction: column;
 }
-.section1__container--form{
+.section1__formcontainer--title{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.section1__formcontainer--title img{
+    /* object-fit: cover; */
+    /* object-position: 100px 100px; */
+    object-fit: cover;
+    object-position: 5px 0 ;
+    width:  120px;
+    height: 120px;
+    border-radius: 100px;
+}
+
+.section1__formcontainer p {
+    color: white;
+    white-space: normal;
+    /* margin: 50px 30px; */
+    /* height: 130px; */
+    text-align: justify;
+    font-family: 'Red Rose';
+    font-size: 12px;
+}
+
+/* .skills {
+    width: 40%;
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+} */
+
+/* .skilbox {
+    box-sizing: border-box;
+    width: 100%;
+    margin:20px 0;
+} */
+.skillbox p{
+    margin:0
+}
+.skill {
+    background-color: black;
+    border: 2px solid white;
+    height: 10px;
+    width: 100%;
+    border-radius: 10px;
+}
+.skill_level{
+    background-color: lime;
+    height: 10px;
+    border-radius: 10px;
+
+}
+
+.l90 { width:90%;}
+.l80 { width:80%;}
+.l50 { width:50%;}
+.l40 { width:40%;}
+.l30 { width:30%;}
+.l20 { width:20%;}
+.l10 { width:10%;}
+
+
+/* .section1 h2 {
+text-align: center;
+color: white;
+} */
+
+/* .section1__imgcontainer p{
+    color: white;
+    text-align: right;
+} */
+/* .section1__container--form{
     display: flex;
     flex-direction: column;
+} */
+
+.SocialNetwork {
+    display: flex;
+    justify-content: space-around ;
+    margin-top: 10px; 
 }
+.SocialNetwork a {
+    width: 10%;
+    height: 10%;
+    
+}
+
 .input{
 color: white;
 background-color: transparent;
@@ -116,9 +185,6 @@ margin-bottom: 15px;
 padding: 0px 20px;
 outline: none;
 height: 50px;
-}
-::placeholder{
-color: white;
 }
 .button{
 background-color: rgba(255,255,255, 0.1);
@@ -148,33 +214,29 @@ background-color :  #4a45c1;
 /* width: 100%; */
 overflow: scroll;
 overflow-y: hidden;
-padding: 30px;
+padding: 10px;
 position: relative;
 background-color :  #4a45c1;
 }
-::-webkit-scrollbar {
-width: 0px;
-background: transparent; /* make scrollbar transparent */
+
+.Carousel::-webkit-scrollbar {
+width: 10px;
+background: transparent;
 }
 
 .Carousel__container {
 white-space: nowrap;
-/* margin: 70px 0px; */
 padding-bottom: 10px;
 }
 
 .carousel-item{
 display: inline-block;
 background-color: rgba(255,255,255, 0.1);
-width: 300px;
+width: 290px;
 height: 550px;
 border-radius: 20px;
 overflow: hidden;
 margin-right: 10px;
-/* cursor: pointer; */
-/* transition: 450ms all; */
-/* transform-origin: center left; */
-/* position: relative; */
 }
 
 .Carousel p {
